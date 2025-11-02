@@ -13,11 +13,15 @@ const options = {
     servers: [
       {
         url: 'http://localhost:5000',
-        url :'https://mvc-host.onrender.com'
+        description: 'Local server',
+      },
+      {
+        url: 'https://mvc-host.onrender.com',
+        description: 'Render (Live) server',
       },
     ],
   },
-  apis: ['./routes/*.js'],
+  apis: ['./routes/*.js'], // path to your route files
 };
 
 const swaggerSpec = swaggerJsdoc(options);
